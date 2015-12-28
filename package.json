@@ -1,0 +1,28 @@
+{
+  "name": "tspan",
+  "version": "0.0.1",
+  "description": "markup for SVG",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "eslint lib/*.js && mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drom/tspan.git"
+  },
+  "author": "Aliaksei Chapyzhenka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drom/tspan/issues"
+  },
+  "homepage": "https://github.com/drom/tspan#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "eslint": "^1.10.3",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4"
+  }
+}
