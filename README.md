@@ -1,5 +1,7 @@
 # \<tspan\>
 
+[![Build Status](https://travis-ci.org/drom/tspan.svg)](https://travis-ci.org/drom/tspan)
+
 Markup for SVG
 
 Wiki markup comparison: http://www.wikimatrix.org/syntax.php
@@ -16,5 +18,3 @@ Wiki markup comparison: http://www.wikimatrix.org/syntax.php
 | strikethrough | `<s>strikethrough</s>` | `<s>strikethrough</s> ~~strikethrough~~` | <s>strikethrough</s> ~~strikethrough~~ | {text-decoration: line-through}
 | underline | `<u>underline</u>` |  | underline | {text-decoration: underline}
 | overline |  `{{overline|overline}}` |  | overline | {text-decoration: overline}
-
-
