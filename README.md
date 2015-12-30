@@ -18,5 +18,5 @@ Wiki markup comparison: http://www.wikimatrix.org/syntax.php
 | subscript | `<sub>subscript</sub>` | `<sub>subscript</sub>` | X<sub>subscript</sub> | {baseline-shift: sub}
 | superscript | `<sup>superscript</sup>` | `<sup>superscript</sup>` | X<sup>superscript</sup> | {baseline-shift: super}
 | strikethrough | `<s>strikethrough</s>` | `<s>strikethrough</s> ~~strikethrough~~` | <s>strikethrough</s> ~~strikethrough~~ | {text-decoration: line-through}
-| underline | `<u>underline</u>` |  | underline | {text-decoration: underline}
+| underline | `<u>underline</u>` | NEW:`<u>underline</u>` | underline | {text-decoration: underline}
 | overline |  `{{overline|overline}}` | NEW:`<o>overline</o>` | <o>overline</o> | {text-decoration: overline}
