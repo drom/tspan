@@ -29,8 +29,9 @@ not bold__
 sub script</sub>
 
 
-         | *italic*  | **bold**    | _italic_  | __bold__  |
+         | italic    | bold        | italic    | bold      |
 ---------|-----------|-------------|-----------|-----------|
+         | *italic*  | **bold**    | _italic_  | __bold__  |
 *italic* |           | **a *b* c** |
 **bold** | *a**b**c* | **a**b**c** |
 _italic_ |           | **a _b_ c** |
