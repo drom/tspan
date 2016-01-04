@@ -10,3 +10,5 @@
 |italic|`''italic''`|`*italic1* _italic2_ <i>italic3</i>`|*italic1* _italic2_ <i>italic3</i>|\mathit{italic}|{font-style: italic}
 |strikethrough|`<s>strikethrough</s>`|`<s>strikethrough</s> ~~strikethrough~~`|<s>strikethrough</s> ~~strikethrough~~| | {text-decoration: line-through}
 |code|`<tt>code</tt>`|``` `code1` <tt>code2</tt> ```|`code1`<tt>code2</tt>| |
+
+Wiki markup comparison: http://www.wikimatrix.org/syntax.php
