@@ -36,10 +36,10 @@ sub script</sub>
 
 ### Nest test
 
-         | italic    | bold        | italic    | bold      |
----------|-----------|-------------|-----------|-----------|
-         | *italic*  | **bold**    | _italic_  | __bold__  |
-*italic* | *a*b*c    | **a *b* c** |
-**bold** | *a**b**c* | **a**b**c** |
-_italic_ |           | **a _b_ c** |
+         | `*italic*` | `**bold**`  | `_italic_` | `__bold__` |
+---------|------------|-------------|------------|------------|
+         | *italic*   | **bold**    | _italic_   | __bold__   |
+*italic* | *a*b*c     | **a *b* c** |
+**bold** | *a**b**c*  | **a**b**c** |
+_italic_ |            | **a _b_ c** |
 __bold__ |
