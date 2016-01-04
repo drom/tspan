@@ -22,9 +22,15 @@ __not bold
 
 not bold__
 
-<sub>sub script</sub>
+```<sub>sub script</sub>```
 
+<sub>sub script</sub> plain
+
+```<sub>sub script```
+ 
 <sub>sub script
+
+```sub script</sub>```
 
 sub script</sub>
 
