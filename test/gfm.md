@@ -53,4 +53,7 @@ aaa<sub>bbb<sup>ccc</sub>ddd</sup>eee
 
 aaa<b>bbb<i>ccc</b>ddd</i>eee
 
+`aaa<u>bbb<s>ccc</u>ddd</s>eee`
+
+aaa<u>bbb<s>ccc</u>ddd</s>eee
 
