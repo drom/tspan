@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 500 800" height="800" width="500" xmlns="http://www.w3.org/2000/svg">
+    <g id="layer1">
+        <text font-size="16" fill="blue">
+            <tspan x="25" y="50"  font-family="monospace">&lt;o&gt;OVERline&lt;/o&gt;</tspan>
+            <tspan x="25" y="100" font-family="monospace">&lt;ins&gt;UNDERline&lt;/ins&gt;</tspan>
+            <tspan x="25" y="150" font-family="monospace">&lt;sub&gt;SUBscript&lt;/sub&gt;</tspan>
+            <tspan x="25" y="200" font-family="monospace">&lt;super&gt;SUPERscript&lt;/super&gt;</tspan>
+            <tspan x="25" y="250" font-family="monospace">&lt;b&gt;Bold&lt;/b&gt;</tspan>
+            <tspan x="25" y="300" font-family="monospace">&lt;i&gt;Italic&lt;/i&gt;</tspan>
+            <tspan x="25" y="350" font-family="monospace">&lt;s&gt;STRIKEthrough&lt;/s&gt;</tspan>
+            <tspan x="25" y="400" font-family="monospace">&lt;tt&gt;Code&lt;/tt&gt;</tspan>
+
+            <tspan x="25" y="450" font-family="monospace">&lt;o&gt;&lt;ins&gt;&lt;s&gt;OuT&lt;/s&gt;&lt;/ins&gt;&lt;/o&gt;</tspan>
+            <tspan x="25" y="500" font-family="monospace">&lt;sub&gt;&lt;super&gt;Su&lt;/super&gt;&lt;/sub&gt;</tspan>
+        </text>
+
+        <text font-size="16">
+            <tspan x="350" y="50"  text-decoration="overline">OVERline</tspan>[]
+            <tspan x="350" y="100" text-decoration="underline">UNDERline</tspan>[]
+            <tspan x="350" y="150" baseline-shift="sub" font-size=".7em">SUBscript</tspan>[]
+            <tspan x="350" y="200" baseline-shift="super" font-size=".7em">SUPERscript</tspan>[]
+            <tspan x="350" y="250" font-weight="bold">Bold</tspan>[]
+            <tspan x="350" y="300" font-style="italic">Italic</tspan>[]
+            <tspan x="350" y="350" text-decoration="line-through">STRIKEthrough</tspan>[]
+            <tspan x="350" y="400" font-family="monospace">Code</tspan>[]
+
+            <tspan x="350" y="450" text-decoration="overline underline line-through">OuT</tspan>[]
+            <tspan x="350" y="500" baseline-shift="sub super" font-size=".7em">SUBscript</tspan>[]
+        </text>
+    </g>
+</svg>
