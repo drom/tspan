@@ -44,7 +44,8 @@ sub script</sub>
 _italic_ |            | **a _b_ c** |
 __bold__ |
 
-```aaa<sub>bbb<sup>ccc</sub>ddd```
+
+`aaa<sub>bbb<sup>ccc</sub>ddd`
 
 aaa<sub>bbb<sup>ccc</sub>ddd
 
