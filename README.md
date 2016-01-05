@@ -8,12 +8,12 @@ Markup for SVG
 
 |format|render|SVG style|
 |------|------|---------|
-|`<o>overline</o>`|<o>overline</o>|{text-decoration: overline}
-|`<ins>underline</ins>`|<ins>underline</ins>|{text-decoration: underline}
-|`<sub>subscript</sub>`|<sub>subscript</sub>|{baseline-shift: sub}
-|`<sup>superscript</sup>`|<sup>superscript</sup>|{baseline-shift: super}
-|`<b>bold</b>`|<b>bold</b>|{font-weight: bold}
-|`<i>italic</i>`|<i>italic</i>|{font-style: italic}
-|`<s>strikethrough</s>`|<s>strikethrough</s>|{text-decoration: line-through}
-|`<tt>code</tt>`|<tt>code</tt>|
+|`<o>overline</o>`|<o>overline</o>|{'text-decoration': 'overline'}
+|`<ins>underline</ins>`|<ins>underline</ins>|{'text-decoration': 'underline'}
+|`<sub>subscript</sub>`|<sub>subscript</sub>|{'baseline-shift': 'sub'}
+|`<sup>superscript</sup>`|<sup>superscript</sup>|{'baseline-shift': 'super'}
+|`<b>bold</b>`|<b>bold</b>|{'font-weight': 'bold'}
+|`<i>italic</i>`|<i>italic</i>|{'font-style': 'italic'}
+|`<s>strikethrough</s>`|<s>strikethrough</s>|{'text-decoration': 'line-through'}
+|`<tt>code</tt>`|<tt>code</tt>|{'font-family': 'monospace'}
 
