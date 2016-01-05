@@ -45,7 +45,12 @@ _italic_ |            | **a _b_ c** |
 __bold__ |
 
 
-`aaa<sub>bbb<sup>ccc</sub>ddd`
+`aaa<sub>bbb<sup>ccc</sub>ddd</sup>eee`
 
-aaa<sub>bbb<sup>ccc</sub>ddd
+aaa<sub>bbb<sup>ccc</sub>ddd</sup>eee
+
+`aaa<b>bbb<i>ccc</b>ddd</i>eee`
+
+aaa<b>bbb<i>ccc</b>ddd</i>eee
+
 
