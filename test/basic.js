@@ -1,6 +1,7 @@
 'use strict';
 
 var lib = require('../lib'),
+    onml = require('onml'),
     expect = require('chai').expect;
 
 var dat = {
@@ -82,6 +83,18 @@ var dat = {
             ['tspan', {}, 'aaa']
         ]
     },
+    'a <o>long</o> <i>and <b>winding</i> <ins>road</ins>': {
+        src: 'a <o>long</o> <i>and <b>winding</i> <sub>road</sub>',
+        dst: [
+            ['tspan', {}, 'a '],
+            ['tspan', {'text-decoration': 'overline'}, 'long'],
+            ['tspan', {}, ' '],
+            ['tspan', {'font-style': 'italic'}, 'and '],
+            ['tspan', {'font-style': 'italic', 'font-weight': 'bold'}, 'winding'],
+            ['tspan', {'font-weight': 'bold'}, ' '],
+            ['tspan', {'baseline-shift': 'sub', 'font-size': '.7em', 'font-weight': 'bold'}, 'road']
+        ]
+    }
 }
 
 describe('basic', function () {
@@ -90,6 +103,9 @@ describe('basic', function () {
             var src = dat[key].src;
             var dst = dat[key].dst;
             expect(lib.parse(src)).to.deep.eq(dst);
+            dst.unshift('text', {x: 20, y: 20, 'font-size': 16});
+            var svg = ['svg', { viewBox: '0 0 400 100', width: 400, height: 100, xmlns: 'http://www.w3.org/2000/svg'}, dst];
+            console.log(onml.stringify(svg));
             done();
         });
     });

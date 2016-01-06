@@ -1,10 +1,12 @@
-# \<tspan\>
+# &lt;tspan&gt;
 
+[![NPM version](https://img.shields.io/npm/v/tspan.svg)](https://www.npmjs.org/package/tspan)
 [![Build Status](https://travis-ci.org/drom/tspan.svg)](https://travis-ci.org/drom/tspan)
 [![Build status](https://ci.appveyor.com/api/projects/status/c0fpqnqvkuwa92a8?svg=true)](https://ci.appveyor.com/project/drom/tspan)
 
+**tspan** is an JavaScript library designed for a simple way of adding some formated text into SVG documents. It takes text string with some XML style tags and produces an array of `<tspan>` objects in [JsonML](http://www.jsonml.org) format.
 
-Markup for SVG
+### Supported tags:
 
 |format|render|SVG style|
 |------|------|---------|
@@ -17,3 +19,68 @@ Markup for SVG
 |`<s>strikethrough</s>`|<s>strikethrough</s>|{'text-decoration': 'line-through'}
 |`<tt>code</tt>`|<tt>code</tt>|{'font-family': 'monospace'}
 
+## Use
+### Node.js
+
+```
+npm i tspan --save
+```
+
+```js
+var tspan = require('tspan');
+
+var source = 'a <o>long</o> <i>and <b>winding</i> <sub>road</sub>';
+var result = tspan(source);
+
+console.log(result);
+// -->
+[
+    ['tspan', {}, 'a '],
+    ['tspan', {'text-decoration': 'overline'}, 'long'],
+    ['tspan', {}, ' '],
+    ['tspan', {'font-style': 'italic'}, 'and '],
+    ['tspan', {'font-style': 'italic', 'font-weight': 'bold'}, 'winding'],
+    ['tspan', {'font-weight': 'bold'}, ' '],
+    ['tspan', {'baseline-shift': 'sub', 'font-size': '.7em', 'font-weight': 'bold'}, 'road']
+]
+```
+tspan array then can be unshifted with a `text` tag, inserted into bigger SVG structure and with a little help of [onml](https://www.npmjs.com/package/onml) package converted into XML form.
+
+```js
+result.unshift('text', {x: 20, y: 20, 'font-size': 16});
+var svg = ['svg', {
+    viewBox: '0 0 400 100',
+    width: 400, height: 100,
+    xmlns: 'http://www.w3.org/2000/svg'
+}, result];
+
+var onml = require('onml');
+
+console.log(onml.stringify(svg)));
+// -->
+<svg viewBox="0 0 400 100" width="400" height="100" xmlns="http://www.w3.org/2000/svg">
+  <text x="20" y="20" font-size="16">
+    <tspan>a </tspan>
+    <tspan text-decoration="overline">long</tspan>
+    <tspan></tspan>
+    <tspan font-style="italic">and </tspan>
+    <tspan font-style="italic" font-weight="bold">winding</tspan>
+    <tspan font-weight="bold"></tspan>
+    <tspan baseline-shift="sub" font-size=".7em" font-weight="bold">road</tspan>
+  </text>
+</svg>
+```
+
+that will look like:
+
+![exmaple](https://rawgit.com/drom/tspan/master/src/alawr.svg)
+
+### Browser
+
+*Browserify!*
+
+## Testing
+`npm test`
+
+## License
+MIT [LICENSE](https://github.com/drom/tspan/blob/master/LICENSE).
