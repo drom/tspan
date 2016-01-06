@@ -73,7 +73,7 @@ console.log(onml.stringify(svg)));
 
 that will look like:
 
-![exmaple](https://rawgit.com/drom/tspan/master/src/alawr.svg)
+![exmaple](https://rawgit.com/drom/tspan/master/test/alawr.svg)
 
 ### Browser
 
