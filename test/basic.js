@@ -9,25 +9,25 @@ var dat = {
         dst: [['tspan', {}, 'just plain text']]
     },
     bold: {
-        src: '**bold1**',
+        src: '<b>bold1</b>',
         dst: [['tspan', {'font-weight': 'bold'}, 'bold1']]
     },
     bold_pre: {
-        src: 'aaa**bold2**',
+        src: 'aaa<b>bold2</b>',
         dst: [
             ['tspan', {}, 'aaa'],
             ['tspan', {'font-weight': 'bold'}, 'bold2']
         ]
     },
     bold_post: {
-        src: '**bold3**aaa',
+        src: '<b>bold3</b>aaa',
         dst: [
             ['tspan', {'font-weight': 'bold'}, 'bold3'],
             ['tspan', {}, 'aaa']
         ]
     },
     bold_pre_post: {
-        src: 'aaa**bold4**aaa',
+        src: 'aaa<b>bold4</b>aaa',
         dst: [
             ['tspan', {}, 'aaa'],
             ['tspan', {'font-weight': 'bold'}, 'bold4'],
@@ -35,7 +35,7 @@ var dat = {
         ]
     },
     italic: {
-        src: 'aa*italic1*aaa',
+        src: 'aa<i>italic1</i>aaa',
         dst: [
             ['tspan', {}, 'aa'],
             ['tspan', {'font-style': 'italic'}, 'italic1'],
@@ -46,7 +46,7 @@ var dat = {
         src: 'aaa<sub>subscript</sub>aaa',
         dst: [
             ['tspan', {}, 'aaa'],
-            ['tspan', {'baseline-shift': 'sub'}, 'subscript'],
+            ['tspan', {'baseline-shift': 'sub', 'font-size': '.7em'}, 'subscript'],
             ['tspan', {}, 'aaa']
         ]
     },
@@ -54,7 +54,7 @@ var dat = {
         src: 'aaaa<sup>superscript</sup>aaa',
         dst: [
             ['tspan', {}, 'aaaa'],
-            ['tspan', {'baseline-shift': 'super'}, 'superscript'],
+            ['tspan', {'baseline-shift': 'super', 'font-size': '.7em'}, 'superscript'],
             ['tspan', {}, 'aaa']
         ]
     },
@@ -75,7 +75,7 @@ var dat = {
         ]
     },
     underline: {
-        src: 'aaaaaaa<u>underline</u>aaa',
+        src: 'aaaaaaa<ins>underline</ins>aaa',
         dst: [
             ['tspan', {}, 'aaaaaaa'],
             ['tspan', {'text-decoration': 'underline'}, 'underline'],
