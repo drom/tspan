@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "eslint lib/*.js test/*.js && ./node_modules/.bin/istanbul cover _mocha test"
+    "test": "eslint **/*.js && istanbul cover ./node_modules/mocha/bin/_mocha test"
   },
   "repository": {
     "type": "git",
