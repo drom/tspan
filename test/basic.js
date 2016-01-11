@@ -95,7 +95,7 @@ var dat = {
             ['tspan', {'baseline-shift': 'sub', 'font-size': '.7em', 'font-weight': 'bold'}, 'road']
         ]
     }
-}
+};
 
 describe('basic', function () {
     Object.keys(dat).forEach(function (key) {
