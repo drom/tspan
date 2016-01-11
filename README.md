@@ -30,7 +30,7 @@ npm i tspan --save
 var tspan = require('tspan');
 
 var source = 'a <o>long</o> <i>and <b>winding</i> <sub>road</sub>';
-var result = tspan(source);
+var result = tspan.parse(source);
 
 console.log(result);
 // -->
