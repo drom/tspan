@@ -19,6 +19,10 @@
 |`<s>strikethrough</s>`|<s>strikethrough</s>|{'text-decoration': 'line-through'}
 |`<tt>code</tt>`|<tt>code</tt>|{'font-family': 'monospace'}
 
+#### Resulted SVG
+
+![exmaple](https://rawgit.com/drom/tspan/master/test/all.svg)
+
 ## Use
 ### Node.js
 
