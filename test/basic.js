@@ -1,6 +1,8 @@
 'use strict';
 
 var lib = require('../lib'),
+    React = require('react'),
+    ReactDOMServer = require('react-dom/server'),
     onml = require('onml'),
     expect = require('chai').expect;
 
@@ -97,6 +99,8 @@ var dat = {
     }
 };
 
+var $ = React.createElement;
+
 describe('basic', function () {
     Object.keys(dat).forEach(function (key) {
         it(key, function (done) {
@@ -110,5 +114,21 @@ describe('basic', function () {
         });
     });
 });
+
+describe('re-basic', function () {
+    Object.keys(dat).forEach(function (key) {
+        it(key, function (done) {
+            var src = dat[key].src;
+            console.log(
+                // ReactDOMServer.renderToString(
+                ReactDOMServer.renderToStaticMarkup(
+                    $('text', {}, lib.reparse(React)(src))
+                )
+            );
+            done();
+        });
+    });
+});
+
 /* eslint-env mocha */
 /* eslint no-console: 0 */
