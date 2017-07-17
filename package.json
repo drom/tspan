@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "eslint **/*.js && istanbul cover ./node_modules/mocha/bin/_mocha test"
+    "test": "eslint **/*.js && nyc mocha test"
   },
   "repository": {
     "type": "git",
@@ -20,10 +20,10 @@
   },
   "homepage": "https://github.com/drom/tspan#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "eslint": "^2.4.0",
-    "istanbul": "^0.4.2",
-    "mocha": "^2.4.5",
-    "onml": "^0.3.1"
+    "chai": "^4.1.0",
+    "eslint": "^4.2.0",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.3",
+    "onml": "^0.4.0"
   }
 }

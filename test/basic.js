@@ -110,3 +110,5 @@ describe('basic', function () {
         });
     });
 });
+/* eslint-env mocha */
+/* eslint no-console: 0 */

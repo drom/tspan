@@ -1,0 +1,10 @@
+.nyc_output
+coverage
+node_modules
+package-lock.json
+
+.eslintrc.js
+.gitignore
+.travis.yml
+appveyor.yml
+test
