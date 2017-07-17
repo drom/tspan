@@ -106,10 +106,10 @@ describe('basic', function () {
         it(key, function (done) {
             var src = dat[key].src;
             var dst = dat[key].dst;
-            expect(lib.parse(src)).to.deep.eq(dst);
-            dst.unshift('text', {x: 20, y: 20, 'font-size': 16});
-            var svg = ['svg', { viewBox: '0 0 400 100', width: 400, height: 100, xmlns: 'http://www.w3.org/2000/svg'}, dst];
-            console.log(onml.stringify(svg));
+            var res = lib.parse(src);
+            expect(res).to.deep.eq(dst);
+            // var newDst = ['text', {x: 20, y: 20, 'font-size': 16}].concat(dst);
+            // var svg = ['svg', { viewBox: '0 0 400 100', width: 400, height: 100, xmlns: 'http://www.w3.org/2000/svg'}, newDst];
             done();
         });
     });
@@ -119,12 +119,18 @@ describe('re-basic', function () {
     Object.keys(dat).forEach(function (key) {
         it(key, function (done) {
             var src = dat[key].src;
-            console.log(
+            var dst = dat[key].dst;
+            try {
+                var html = ReactDOMServer.renderToStaticMarkup(
                 // ReactDOMServer.renderToString(
-                ReactDOMServer.renderToStaticMarkup(
                     $('text', {}, lib.reparse(React)(src))
-                )
-            );
+                );
+                var res = onml.parse(html, {trim: false});
+                expect(res).to.deep.eq(['text', {}].concat(dst));
+            } catch (err) {
+                console.log(html);
+                throw err;
+            }
             done();
         });
     });
