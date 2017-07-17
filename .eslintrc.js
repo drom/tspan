@@ -1,16 +1,25 @@
-{
-    env: {
-        node: true
+module.exports = {
+    "env": {
+        "es6": true,
+        "node": true
     },
-    rules: {
-        quotes: [1, "single"],
-        no-mixed-requires: 1,
-        no-unused-vars: 1,
-        camelcase: 0,
-        key-spacing: 0,
-        no-multi-spaces: 0,
-        no-eval: 1,
-        no-shadow: 1,
-        new-cap: 1
+    "extends": "eslint:recommended",
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
     }
-}
+};
