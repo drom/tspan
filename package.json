@@ -10,7 +10,7 @@
     "test": "eslint lib/*.js && nyc mocha test",
     "browserify": "browserify lib/index.js > build/tspan.js",
     "rollup": "rollup -f umd -n tspan -o build/tspan.js -- lib/parse.js",
-    "prepublish": "npm run test && mkdir -p build && npm run browserify"
+    "prepublish": "npm run test && mkdir -p build && npm run rollup"
   },
   "files": [
     "build/tspan.js"
