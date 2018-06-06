@@ -13,6 +13,7 @@
   "files": [
     "build/tspan.js"
   ],
+  "unpkg": "build/tspan.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/drom/tspan.git"
