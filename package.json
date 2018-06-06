@@ -7,8 +7,12 @@
     "test": "test"
   },
   "scripts": {
-    "test": "eslint **/*.js && nyc mocha test"
+    "test": "eslint lib/*.js && nyc mocha test",
+    "prepublish": "npm run test && mkdir -p build && browserify lib/index.js > build/tspan.js"
   },
+  "files": [
+    "build/tspan.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/drom/tspan.git"
@@ -20,6 +24,7 @@
   },
   "homepage": "https://github.com/drom/tspan#readme",
   "devDependencies": {
+    "browserify": "^16.2.2",
     "chai": "^4.1.0",
     "eslint": "^4.2.0",
     "mocha": "^3.4.2",
