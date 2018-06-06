@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "eslint lib/*.js && nyc mocha test",
-    "prepublish": "npm run test && mkdir -p build && browserify lib/index.js > build/tspan.js"
+    "prepublish": "npm run test && mkdir -p build && browserify --standalone lib/index.js > build/tspan.js"
   },
   "files": [
     "build/tspan.js"
