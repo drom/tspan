@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/drom/tspan#readme",
   "devDependencies": {
+    "@drom/eslint-config": "^0.7.0",
     "browserify": "^16.2.2",
     "chai": "^4.1.0",
     "eslint": "^4.2.0",
@@ -35,5 +36,11 @@
     "onml": "^0.4.4",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
+  },
+  "eslintConfig": {
+    "extends": "@drom/eslint-config/eslint4/node4",
+    "rules": {
+      "no-console": 1
+    }
   }
 }
