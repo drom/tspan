@@ -15,21 +15,21 @@ var dat = {
         src: '<b>bold1</b>',
         dst: [['tspan', {'font-weight': 'bold'}, 'bold1']]
     },
-    bold_pre: {
+    'bold_pre': {
         src: 'aaa<b>bold2</b>',
         dst: [
             ['tspan', {}, 'aaa'],
             ['tspan', {'font-weight': 'bold'}, 'bold2']
         ]
     },
-    bold_post: {
+    'bold_post': {
         src: '<b>bold3</b>aaa',
         dst: [
             ['tspan', {'font-weight': 'bold'}, 'bold3'],
             ['tspan', {}, 'aaa']
         ]
     },
-    bold_pre_post: {
+    'bold_pre_post': {
         src: 'aaa<b>bold4</b>aaa',
         dst: [
             ['tspan', {}, 'aaa'],
