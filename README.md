@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/tspan.svg)](https://www.npmjs.org/package/tspan)
 [![Build Status](https://travis-ci.org/drom/tspan.svg)](https://travis-ci.org/drom/tspan)
-[![Build status](https://ci.appveyor.com/api/projects/status/c0fpqnqvkuwa92a8?svg=true)](https://ci.appveyor.com/project/drom/tspan)
+[![Coverage Status](https://coveralls.io/repos/github/drom/tspan/badge.svg?branch=master)](https://coveralls.io/github/drom/tspan?branch=master)
 
 **tspan** is an JavaScript library designed for a simple way of adding some formated text into SVG documents. It takes text string with some XML style tags and produces an array of `<tspan>` objects in [JsonML](http://www.jsonml.org) format.
 
