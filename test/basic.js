@@ -96,6 +96,14 @@ var dat = {
             ['tspan', {'font-weight': 'bold'}, ' '],
             ['tspan', {'baseline-shift': 'sub', 'font-size': '.7em', 'font-weight': 'bold'}, 'road']
         ]
+    },
+    'a < <b>b</b> > c': {
+        src: 'a < <b>b</b> > c',
+        dst: [
+            ['tspan', {}, 'a &lt; '],
+            ['tspan', {'font-weight': 'bold'}, 'b'],
+            ['tspan', {}, ' &gt; c']
+        ]
     }
 };
 
