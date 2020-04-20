@@ -1,6 +1,6 @@
 {
   "name": "tspan",
-  "version": "0.3.6",
+  "version": "0.4.0",
   "description": "markup for SVG",
   "main": "lib/index.js",
   "directories": {
