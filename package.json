@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "eslint lib/*.js && nyc mocha test",
+    "test": "eslint lib/*.js && nyc -r=lcov -r=text mocha test",
+    "coverage": "nyc report -r=text-lcov | coveralls",
     "browserify": "browserify --standalone tspan lib/index.js > build/tspan.js",
     "prepublish": "npm run test && mkdir -p build && npm run browserify"
   },
@@ -27,15 +28,16 @@
   },
   "homepage": "https://github.com/drom/tspan#readme",
   "devDependencies": {
-    "@drom/eslint-config": "^0.7.0",
-    "browserify": "^16.2.2",
-    "chai": "^4.1.0",
-    "eslint": "^4.2.0",
-    "mocha": "^5.2.0",
-    "nyc": "^12.0.2",
-    "onml": "^0.4.4",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "@drom/eslint-config": "^0.10.0",
+    "browserify": "^16.5.1",
+    "coveralls": "^3.0.11",
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "mocha": "^7.1.1",
+    "nyc": "^15.0.1",
+    "onml": "^1.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "eslintConfig": {
     "extends": "@drom/eslint-config/eslint4/node4",
